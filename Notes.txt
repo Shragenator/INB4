@@ -1,0 +1,43 @@
+
+TO DO 
+
+Specify names for technical elements of data flow (Nate)
+
+
+
+-------------
+<<<<<ALGORITHM DESIGN AND DATA FLOW FOR PROTOTYPE>>>>>
+ESPN website pull data and stats via iterators on the content of js scripts. send to Json?
+Organize data using natural language processing (learn how to do this part better)
+		|
+		v
+Semantic Language to determine wins, losses, reasons, data, etc (see cancercommons semantic code)
+Machine learning algorithm to train using Semantic language as guide for defining the organized data and stats (figure out which machine learning algorithm is ideal, perhaps 
+
+Eventually reinterpret and find out 
+
+
+
+
+Objectives down the road for program:
+Find opposing viewpoints, opinions with bias, start tying to analyze biases
+
+-Resources:
+   https://www.burakkanber.com/blog/machine-learning-sentiment-analysis/
+
+
+----
+
+LARGER IDEAS / PHILOSPHIES
+
+
+Biases are oriented around an absolute truth 
+
+
+
+
+------
+
+
+LONG TERM IDEAS / GOALS\
+
