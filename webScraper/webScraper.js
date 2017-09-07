@@ -48,7 +48,7 @@ function parseCSV(str) {
 
 urlArr = parseCSV(data);
 
-while (urlArr.hasnext()) {
+while (urlArr.hasnext()) {                
     let $ = cheerio.load(urlArr.value)
     
     var frame = {
@@ -89,7 +89,7 @@ while (urlArr.hasnext()) {
 
     };
 
-    var news = $('.list.items').scrape(frame);
-    console.log(newsData);
+    var newsData = $('.list.items').scrape(frame);
+    console.log(newsData);  //only puts out the data in console for now
 
 }
