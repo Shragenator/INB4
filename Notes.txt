@@ -1,8 +1,13 @@
 
 TO DO 
 
-Specify names for technical elements of data flow (Nate)
+ESPN rss feeds?
 
+Specify names for technical elements of data flow 
+Read up on natural language processing 
+
+Use AdSense for initial user preferences? Check adsense Tos about using their data
+https://www.shoutmeloud.com/adsense-guide
 
 
 -------------
@@ -22,6 +27,8 @@ Eventually reinterpret and find out
 Objectives down the road for program:
 Find opposing viewpoints, opinions with bias, start tying to analyze biases
 
+recurrent adversarial networks
+
 -Resources:
    https://www.burakkanber.com/blog/machine-learning-sentiment-analysis/
 
@@ -39,5 +46,5 @@ Biases are oriented around an absolute truth
 ------
 
 
-LONG TERM IDEAS / GOALS\
+LONG TERM IDEAS / GOALS
 
