@@ -1,5 +1,4 @@
 let cheerio = require('cheerio')
-//let $ = cheerio.load("HTML DOM to load") // See Cheerio API
 let jsonframe = require('jsonframe-cheerio');
 jsonframe($); // initializes the plugin
 
@@ -48,8 +47,8 @@ function parseCSV(str) {
 
 urlArr = parseCSV(data);
 
-while (urlArr.hasnext()) {                
-    let $ = cheerio.load(urlArr.value)
+for (var i = 0 ;i < urlArr.length; i++) {                
+    let $ = cheerio.load(urlArr.i)
     
     var frame = {
         "article": {           // setting the parent item as "article"
@@ -89,7 +88,11 @@ while (urlArr.hasnext()) {
 
     };
 
-    var newsData = $('.list.items').scrape(frame);
-    console.log(newsData);  //only puts out the data in console for now
+
+    var newsData = []
+    newsData.insert(i, $('.list.items').scrape(frame));
+    
 
 }
+
+console.log(newsData);  //only puts out the data in console for now
