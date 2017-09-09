@@ -1,17 +1,18 @@
 let cheerio = require('cheerio')
-let jsonframe = require('jsonframe-cheerio');
-jsonframe($); // initializes the plugin
+let jsonframe = require('jsonframe-cheerio')
+let $ = cheerio.load('  ')
+jsonframe($) // initializes the plugin
 
-//let $ = cheerio.load('http://www.huffingtonpost.com/entry/hurricane-irma-barbuda_us_59b08f6ce4b0dfaafcf544c9?ncid=inblnkushpmg00000009')   for testing if not using CSV reader
+//let $ = cheerio.load('http://www.huffingtonpost.com/entry/hurricane-irma-barbuda_us_59b08f6ce4b0dfaafcf544c9?ncid=inblnkushpmg00000009');  for testing if not using CSV reader
 
-fs = require('fs')          
-fs.readFile('/urlCSV', 'utf8', function (err,data) {       
-    if (err) {
-        return console.log(err);
-    }
-    console.log(data);
-});
-
+var fs = require('fs')
+function read() {
+    fs.readFile('~urlCSV.txt', 'utf8', function (err, data) {
+        console.log('Reading CSV');
+        if (err) throw err;
+        console.log(data);
+    });
+}
 
 function parseCSV(str) {
     var arr = [];
@@ -44,11 +45,13 @@ function parseCSV(str) {
     return arr;
 }
 
+console.log('test');
+read();
+console.log(urlArr)
+var newsData = [];
 
-urlArr = parseCSV(data);
-
-for (var i = 0 ;i < urlArr.length; i++) {                
-    let $ = cheerio.load(urlArr.i)
+for (var i = 0; i < urlArr.length; i++) {                
+    let $ = cheerio.load(urlArr[i]);
     
     var frame = {
         "article": {           // setting the parent item as "article"
@@ -88,11 +91,10 @@ for (var i = 0 ;i < urlArr.length; i++) {
 
     };
 
-
-    var newsData = []
-    newsData.insert(i, $('.list.items').scrape(frame));
+    let result = $('body').scrape(frame);
     
-
+    newsData.insert(i, result);     //the important jsonframe call
+   
 }
 
 console.log(newsData);  //only puts out the data in console for now
